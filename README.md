@@ -1,4 +1,4 @@
-# Bookstore
+# Sweep College Market
 Run `npm install` to install pakcages.
 
 ## Development server
