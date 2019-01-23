@@ -1,17 +1,17 @@
 
 <ng-template #loading>
   <p><img src="assets/img/ajax-loader.gif">
-    Chargement en cours...</p>
+    Cargando...</p>
 </ng-template>
 
 <table *ngIf="books$ | async as books ; else loading">
   <thead>
   <tr>
     <th></th>
-    <th>Titre</th>
-    <th>Auteur</th>
-    <th>Prix</th>
-    <th>Note</th>
+    <th>Titulo</th>
+    <th>Autor</th>
+    <th>Precio</th>
+    <th>Notas</th>
     <th></th>
   </tr>
   </thead>

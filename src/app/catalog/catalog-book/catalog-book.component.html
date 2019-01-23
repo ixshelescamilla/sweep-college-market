@@ -1,21 +1,21 @@
 <ng-template #loading>
-  Chargement en cours...
+  Cargando...
 </ng-template>
 <table *ngIf="book$|async as book ; else loading">
   <tr>
-    <th>Couverture</th>
+    <th>Imagen</th>
     <td><img [src]="book.image"></td>
   </tr>
   <tr>
-    <th>Titre</th>
+    <th>Titulo</th>
     <td>{{book.title}}</td>
   </tr>
   <tr>
-    <th>Auteur</th>
+    <th>Autor</th>
     <td>{{book.author}}</td>
   </tr>
   <tr>
-    <th>Prix</th>
+    <th>Precio</th>
     <td>{{book.price}}</td>
   </tr>
   <tr>
@@ -23,7 +23,7 @@
     <td>{{book.rating}}</td>
   </tr>
   <tr>
-    <th>Pages</th>
+    <th>Paginas</th>
     <td>{{book.pages}}</td>
   </tr>
   <tr>

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {AppValidators} from '../../core/app-validators';
-import {debounceTime, distinctUntilChanged, filter, switchMap} from 'rxjs/operators';
+import {debounceTime, distinctUntilChanged, filter, switchMap, tap} from 'rxjs/operators';
 import {CountryService} from '../../core/services/country.service';
 import {Observable} from 'rxjs/Observable';
 
@@ -20,7 +20,7 @@ export class CartOrderReactiveComponent implements OnInit {
   billing: FormGroup;
   sameAddress: FormControl;
 
-  countries$: Observable<string[]>;
+  countries$: Observable<any>;
 
   onSubmit() {
     this.submitted = true;
@@ -98,7 +98,9 @@ export class CartOrderReactiveComponent implements OnInit {
       }
     });
     this.countries$ = this.shipping.controls['country'].valueChanges
-      .pipe(...this.getOperators());
+      .pipe(
+        tap(...this.getOperators())
+      );
   }
   getOperators() {
     return [

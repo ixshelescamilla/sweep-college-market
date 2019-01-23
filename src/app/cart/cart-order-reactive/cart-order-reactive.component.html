@@ -6,29 +6,29 @@
       (ngSubmit)="onSubmit()"
       [class.submitted]="submitted">
   <fieldset formGroupName="identity">
-    <legend>Votre identité</legend>
-    <app-field label="Prénom">
+    <legend>Identificate</legend>
+    <app-field label="Nombre">
       <input type="text" formControlName="firstname">
     </app-field>
-    <app-field label="Nom*">
+    <app-field label="Apellido">
       <input type="text" formControlName="lastname">
     </app-field>
     <app-field label="Email">
       <input type="email" formControlName="email">
     </app-field>
-    <app-field label="Téléphone">
+    <app-field label="Telefono">
       <input type="tel" formControlName="phone">
     </app-field>
   </fieldset>
   <fieldset formGroupName="shipping">
-    <legend>Adresse de livraison</legend>
-    <app-field label="Numéro et rue">
+    <legend>Entrega</legend>
+    <app-field label="Edificio">
       <input type="text" formControlName="street">
     </app-field>
-    <app-field label="Code postal*">
+    <app-field label="Salon">
       <input type="text" formControlName="zipcode">
     </app-field>
-    <app-field label="Ville*">
+    <app-field label="Carrera*">
       <input type="text" formControlName="city">
     </app-field>
     <app-field label="Pays">
@@ -39,15 +39,15 @@
       </datalist>
     </app-field>
   </fieldset>
-  <p>
+  <!-- <p>
     <label>
       <input type="checkbox"
              formControlName="sameAddress"
              (change)="updateBillingAddress()">
       même adresse de facturation
     </label>
-  </p>
-  <fieldset formGroupName="billing"
+  </p> -->
+  <!-- <fieldset formGroupName="billing"
             *ngIf="hasBillingAddress()">
     <legend>Adresse de facturation</legend>
     <app-field label="Numéro et rue">
@@ -62,9 +62,9 @@
     <app-field label="Pays">
       <input type="text" formControlName="country">
     </app-field>
-  </fieldset>
+  </fieldset> -->
   <p>
     <button [disabled]="isDisabled()"
-            type="submit">Enregistrer</button>
+            type="submit">Comprar</button>
   </p>
 </form>
